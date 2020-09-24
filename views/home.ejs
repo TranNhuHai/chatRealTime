@@ -3,10 +3,10 @@
 <head>
   <title>Real Time Chat Demo socket.io</title>
   <script src="jquery.js"></script>
+  <script src="socket.io/socket.io.js"></script>
   <script>
-  $(document).ready(() => {
-  alert("hello")
-  });
+    var socket = io("http://localhost:3000");
+  $(document).ready();
   </script>
   
 </head>
