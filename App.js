@@ -3,4 +3,12 @@ var app = express();
 var server = require('http').Server(app);
 var port = 3000;
 app.use(express.static('public'));
-server.listen(port, () => {console.log('Server listening', port)});
+app.set("view engine", "ejs");
+app.set("views", "./views");
+server.listen(port, () => {
+  console.log('Server listening', port)
+});
+
+app.get("/", function(req, res) {
+  res.render("home");
+});
